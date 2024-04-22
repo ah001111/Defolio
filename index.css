@@ -1,0 +1,659 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --main-color: white;
+    --bg-nav-h: rgba(0, 0, 0, 0.9);
+    --main-color-p: #4e4e4e;
+    --main-color-shap: #0078ff;
+    --main-border: #cde1f8;
+    --bg-about: #f5f5f5;
+    --bg-blog: #f8f8f8;
+    --font-size: 1rem;
+}
+
+body {
+    background-color: var(--bg-about);
+}
+
+/* ========================================home section====================================== */
+
+.bg-nav {
+    background-color: var(--bg-nav-h);
+}
+
+.navbar .nav-item a {
+    color: var(--main-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar .nav-item .cont {
+    padding-right: 0 !important;
+}
+
+.navbar .nav-item a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    transition: 0.5s all;
+}
+
+.navbar .nav-item a:hover::after {
+    width: 60%;
+}
+
+body:has(.home:target) .HOME::after,
+body:has(.about:target) .ABOUT::after,
+body:has(.services:target) .SERVICES::after,
+body:has(.portfolio:target) .WORK::after,
+body:has(.blog:target) .BLOG::after,
+body:has(.contactt:target) .CONTACT::after {
+    width: 60%;
+}
+
+.bg-home {
+    background-image: url(images/hero-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: background-image 2s;
+}
+
+#HOME {
+    color: var(--main-color) !important;
+}
+
+.home .bg-home h1 {
+    font-size: calc(var(--font-size) + 3.5rem);
+}
+
+.bg-home-color {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.home-contant p::after {
+    content: "|";
+    animation: typing 5s 1s linear infinite;
+    font-size: calc(var(--font-size) + 1.5rem);
+    font-weight: 600;
+}
+
+@keyframes typing {
+
+    0% {
+        content: "D|";
+    }
+
+    2% {
+        content: "De|";
+    }
+
+    4% {
+        content: "Des|";
+    }
+
+    6% {
+        content: "Desi|";
+    }
+
+    8% {
+        content: "Desig|";
+    }
+
+    10% {
+        content: "Design|";
+    }
+
+    12% {
+        content: "Designe|";
+    }
+
+    14% {
+        content: "Designer|";
+    }
+
+    16% {
+        content: "D|";
+    }
+
+    18% {
+        content: "De|";
+    }
+
+    20% {
+        content: "Dev|";
+    }
+
+    22% {
+        content: "Deve|";
+    }
+
+    24% {
+        content: "Devel|";
+    }
+
+    26% {
+        content: "Develo|";
+    }
+
+    28% {
+        content: "Develop|";
+    }
+
+    30% {
+        content: "Developer|";
+    }
+
+    32% {
+        content: "F|";
+    }
+
+    34% {
+        content: "Fr|";
+    }
+
+    36% {
+        content: "Fre|";
+    }
+
+    38% {
+        content: "Free|";
+    }
+
+    40% {
+        content: "Freel|";
+    }
+
+    42% {
+        content: "Freela|";
+    }
+
+    44% {
+        content: "Freelan|";
+    }
+
+    46% {
+        content: "Freelanc|";
+    }
+
+    48% {
+        content: "Freelance|";
+    }
+
+    50% {
+        content: "Freelancer|";
+    }
+
+    52% {
+        content: "P|";
+    }
+
+    54% {
+        content: "Ph|";
+    }
+
+    56% {
+        content: "Pho|";
+    }
+
+    58% {
+        content: "Phot|";
+    }
+
+    60% {
+        content: "Photo|";
+    }
+
+    62% {
+        content: "Photog|";
+    }
+
+    64% {
+        content: "Photogr|";
+    }
+
+    66% {
+        content: "Photogra|";
+    }
+
+    68% {
+        content: "Photograp|";
+    }
+
+    70% {
+        content: "Photograph|";
+    }
+
+    72% {
+        content: "Photographe|";
+    }
+
+    74% {
+        content: "Photographer|";
+    }
+}
+
+/* ========================================about section====================================== */
+
+.about {
+    padding: 5rem 0rem;
+}
+
+.about .about-contant-2 p {
+    font-size: calc(var(--font-size) + 0.25rem);
+    color: var(--main-color-p);
+    font-weight: 300;
+}
+
+.about .about-contant-2 h5::after {
+    content: "";
+    width: 6rem;
+    height: 0.17rem;
+    background-color: var(--main-color-shap);
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+}
+
+/* ========================================services section====================================== */
+
+.services h3 {
+    font-size: calc(var(--font-size) + 2rem);
+    font-weight: 700;
+    padding-top: 3rem;
+}
+
+.services .heading p {
+    position: relative;
+}
+
+.services .heading p::after {
+    content: " ";
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--main-color-shap);
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services i {
+    padding: 1.6rem;
+    border-radius: 50%;
+    border: var(--main-color-shap) 0.5rem solid;
+    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+}
+
+.services i:hover {
+    color: var(--bg-about);
+    background-color: var(--main-color-shap);
+    border: var(--main-border) 0.5rem solid;
+}
+
+.services h2 {
+    font-size: calc(var(--font-size) + 0.4rem);
+    margin-bottom: 1rem;
+}
+
+.services p {
+    color: var(--main-color-p);
+}
+
+.SERVICES-2 {
+    background-image: url(images/counters-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    color: var(--main-color);
+    position: relative;
+}
+
+.SERVICES-2 .bg-service {
+    background-color: rgba(0, 120, 255, 0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.SERVICES-2 i {
+    border: var(--main-border) 0.7rem solid;
+    padding: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+}
+
+.SERVICES-2 p {
+    font-size: calc(var(--font-size) + 1rem);
+}
+
+.SERVICES-2 span {
+    font-size: var(--font-size);
+    font-weight: 400;
+}
+
+/* ========================================services section====================================== */
+
+.portfolio {
+    padding: 5rem 0rem;
+}
+
+.portfolio h3 {
+    font-size: calc(var(--font-size) + 2rem);
+    font-weight: 700;
+}
+
+.portfolio .heading p {
+    position: relative;
+}
+
+.portfolio .heading p::after {
+    content: " ";
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--main-color-shap);
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portfolio .prot {
+    color: var(--main-color-shap);
+    font-size: 12.8px;
+}
+
+.portfolio span {
+    font-size: 12.8px;
+}
+
+.portfolio i {
+    color: var(--main-color-shap);
+    margin-top: 1rem;
+}
+
+.portfolio .portfo img {
+    transition: 2s;
+}
+
+.portfolio .portfo:hover img {
+    transform: scale(1.5);
+}
+
+.carousel {
+    background-image: url(images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.carousel span {
+    font-size: calc(var(--font-size) + 0.4rem);
+    font-weight: 600;
+}
+
+.carousel .bg-carousel {
+    position: absolute;
+    background-color: rgba(0, 120, 255, 0.6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 0.93rem;
+    width: 0.93rem;
+    border-radius: 50%;
+    margin-top: -9.4rem;
+}
+
+/* ========================================blog section====================================== */
+
+.blog {
+    padding: 5rem 0rem;
+}
+
+.blog h3 {
+    font-size: calc(var(--font-size) + 2rem);
+    font-weight: 700;
+}
+
+.blog .heading p {
+    position: relative;
+}
+
+.blog .heading p::after {
+    content: " ";
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--main-color-shap);
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog .TRAVEL h6 {
+    background-color: var(--main-color-shap);
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+}
+
+.blog-1 p {
+    color: var(--main-color-p);
+}
+
+.blog-2 img {
+    width: 10%;
+}
+
+.blog-2 .oclock span {
+    background-color: var(--bg-blog);
+}
+
+.blog-2 .name:hover {
+    color: var(--main-color-shap);
+}
+
+/* ========================================contact section====================================== */
+
+.contactt {
+    background-image: url(images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact2-bg {
+    position: relative;
+    background-color: rgba(0, 120, 255, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 7rem 0rem 5rem 0rem;
+}
+
+h5::before {
+    content: " ";
+    width: 20%;
+    height: 0.1875rem;
+    background-color: #0078ff;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0rem;
+}
+
+.contactt ul {
+    margin-left: -2rem;
+}
+
+.contactt .list-contact i {
+    color: var(--main-color-shap);
+    padding: 0rem 0.8rem 0.6rem 0px;
+}
+
+.contactt .list-contant i {
+    border: #0078ff 3px solid;
+    padding: 0.4rem 0.7rem 0.7rem 0.7rem;
+    border: var(--main-color-shap) 0.3rem solid;
+    margin: 0.3rem;
+    border-radius: 50%;
+}
+
+.contactt .list-contant i:hover {
+    color: var(--bg-about);
+    background-color: var(--main-color-shap);
+    border: var(--main-border) 0.3rem solid;
+}
+
+.contactt .inputs textarea {
+    padding-bottom: 6rem;
+}
+
+footer {
+    background-color: #0062D3;
+}
+
+/* ==================================================== */
+
+/* btn up Scroll */
+
+#btn-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999999999999999;
+    cursor: pointer;
+    display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: auto;
+    }
+}
+
+/* sideBar option */
+
+.parent-option {
+    /* left: 0px; */
+    left: -242px;
+    top: 50%;
+}
+
+.option li {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.option img{
+    width: 35px;
+    height: 25px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.parent-option i{
+    cursor: pointer;
+}
+
+/* looding screen */
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 9999999999;
+    display: flex;
+}
+
+body{
+    overflow: hidden;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ff206e;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #ff206e;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+
